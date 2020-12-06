@@ -10,4 +10,5 @@ const googlebooksSchema = new mongoose.Schema(
     },
 );
 
-module.exports = mongoose.model("googlebooks", googlebooksSchema);
+const Book = mongoose.model("Book", googlebooksSchema);
+module.exports = Book;
