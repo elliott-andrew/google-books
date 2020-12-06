@@ -8,6 +8,7 @@ const Navbar = () => {
             <nav class="f3">
                 <ul>
                     <li>Search</li>
+                    <li>|</li>
                     <li>Saved</li>
                 </ul>
             </nav>

@@ -1,0 +1,14 @@
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2vw;
+    letter-spacing: .1em;
+    text-align: center;
+    color: #c1946a;
+    background-color: #e6e2d3;
+}
