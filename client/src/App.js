@@ -1,14 +1,24 @@
 import React from 'react';
 import './App.css';
 import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer"
+import Footer from "./Components/Footer";
+import Search from "./Pages/Search";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Search />
+        </Route>
+        <Route exact path="/search">
+          <Search />
+        </Route>
+      </Switch>
       <Footer />
-    </>
+    </Router>
   );
 };
 
