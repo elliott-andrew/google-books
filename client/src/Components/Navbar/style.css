@@ -8,11 +8,11 @@
   }
   
   .f2 {
-    margin-right: auto
+    margin-right: auto;
   }
   
   .f3 {
-    flex-basis: 300px;  
+    flex-basis: 100px;  
   }
   
   header h1 {
@@ -20,7 +20,7 @@
     font-family: monospace;
     font-style: normal;
     font-weight: 700;
-    font-size: 2vw;
+    font-size: 15px;
     letter-spacing: .1em;
     color: #c1946a;
   }
@@ -29,13 +29,12 @@
     font-family: monospace;
     font-style: normal;
     font-weight: bold;
-    font-size: 1.2vw;
+    font-size: 11px;
     letter-spacing: .1em;
     color: #c1946a;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: right;
+    text-align: left;
+
   }
   
   header li {
