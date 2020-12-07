@@ -13,4 +13,4 @@ export function FormBtn(props) {
     return (
         <input id="submitBtn" type="submit" />
     )
-}
+};
