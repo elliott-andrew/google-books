@@ -7,9 +7,9 @@ const Navbar = () => {
             <div className="f2"><h1>Google Books Search</h1></div>
             <nav className="f3">
                 <ul>
-                    <li>Search</li>
+                    <li><a href="/search">Search</a></li>
                     <li>|</li>
-                    <li>Saved</li>
+                    <li><a href="/saved">Saved</a></li>
                 </ul>
             </nav>
         </header>

@@ -19,7 +19,7 @@ const Saved = () => {
     return (
         <>
             <h2>Saved</h2>
-            { books ?
+            { saved ?
                 saved.books.map(book => {
                     return (
                         <Book
