@@ -38,17 +38,18 @@ const Search = () => {
                 Submit Book
               </FormBtn>
             {
-                !formObject.title ? <p>Find information on any book</p> :
+                formObject.title ?
                     formObject.results.map(book => {
                         return (
                             <Book
                                 title={book.volumeInfo.title}
                                 authors={book.volumeInfo.authors}
-                                descripton={book.volumeInfo.description}
+                                description={book.volumeInfo.description}
                                 thumbnail={book.volumeInfo.imageLinks.thumbnail}
                             />
                         )
-                    })
+                    }) :
+                    <p style={{ textAlign: "center", marginTop: "50px" }}>Search above to find information on any book</p>
             }
         </form>
     )
