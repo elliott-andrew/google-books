@@ -16,11 +16,25 @@ const Saved = () => {
             .catch(err => console.log(err));
     });
 
-    const unsave = id => {
-        axios.delete("api/books" + id)
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
-    }
+    return (
+        <>
+            <h2>Saved</h2>
+            { books ?
+                saved.books.map(book => {
+                    return (
+                        <Book
+                            title={book.title}
+                            authors={book.authors}
+                            description={book.description}
+                            thumbnail={book.image}
+                            saved={true}
+                        />
+                    )
+                }) :
+                <p>No saved books.</p>
+            }
+        </>
+    )
 };
 
 export default Saved;
