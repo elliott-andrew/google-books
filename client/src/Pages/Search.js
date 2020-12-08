@@ -25,14 +25,14 @@ const Search = () => {
         const REQUESTURL = `https://www.googleapis.com/books/v1/volumes?q=${formObject.title.split(' ').join('+')}`;
         axios.get(REQUESTURL)
             .then(res => setFormObject({ ...formObject, results: res.data.items }))
-            .catch(err);
+            .catch(err => console.log(err));
     };
 
     return (
         <form>
             <img src={bookIcon} alt="Books Icon" style={{ width: "200px", margin: "0 auto", marginTop: "50px", display: "block" }} />
-            <TextArea />
-            <FormBtn>
+            <TextArea value={formObject.title} onChange={handleEventChange} />
+            <FormBtn onClick={handleFormSubmit}>
                 {/* must add on click */}
                 Submit Book
               </FormBtn>

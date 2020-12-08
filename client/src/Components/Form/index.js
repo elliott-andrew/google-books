@@ -4,13 +4,13 @@ import "./style.css";
 export function TextArea(props) {
     return (
         <div id="roundedCorners">
-            <textarea value={formObject.title} onChange={handleChange} rows="1" id="searchBox" />
+            <textarea value={props.value} onChange={props.onChange} rows="1" id="searchBox" />
         </div>
     )
 };
 
 export function FormBtn(props) {
     return (
-        <input onClick={handleFormSubmit} id="submitBtn" type="submit" />
+        <input onClick={props.onClick} id="submitBtn" type="submit" />
     )
 };
