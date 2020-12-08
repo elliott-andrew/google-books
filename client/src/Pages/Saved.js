@@ -19,7 +19,7 @@ const Saved = () => {
     return (
         <>
             <h2>Saved</h2>
-            { saved ?
+            { saved.length > 0 ?
                 saved.books.map(book => {
                     return (
                         <Book
