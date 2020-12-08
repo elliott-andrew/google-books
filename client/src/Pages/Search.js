@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { TextArea, FormBtn } from '../Components/Form';
 import axios from 'axios'
 import bookIcon from "../assets/index";
+import Book from "../Components/Book";
 
 const Search = () => {
     const [formObject, setFormObject] = useState(
@@ -36,6 +37,19 @@ const Search = () => {
                 {/* must add on click */}
                 Submit Book
               </FormBtn>
+            {
+                !formObject.title ? <p>Find information on any book</p> :
+                    formObject.results.map(book => {
+                        return (
+                            <Book
+                                title={book.volumeInfo.title}
+                                authors={book.volumeInfo.authors}
+                                descripton={book.volumeInfo.description}
+                                thumbnail={book.volumeInfo.imageLinks.thumbnail}
+                            />
+                        )
+                    })
+            }
         </form>
     )
 };

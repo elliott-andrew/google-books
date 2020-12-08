@@ -5,7 +5,7 @@ const Book = ({ title, authors, description, thumbnail }) => {
         <div className="book-info">
             <p>{title}</p>
             <p>Authors: {authors}</p>
-            <img alt={title + " - " + authors} src={thumbnail} />
+            <img alt={title} src={thumbnail} />
             <p>
                 {description}
             </p>
