@@ -29,6 +29,20 @@ const Search = () => {
             .catch(err => console.log(err));
     };
 
+    const saveBook = (title, authors, description, thumbnail) => {
+        const savedBook = {
+            title: title,
+            authors: authors,
+            description: description,
+            image: thumbnail
+        };
+        axios.get("api/books", savedBook)
+            .then(res => {
+                console.log("Saved: " + res);
+            })
+            .catch(err => console.log(err));
+    };
+
     return (
         <form>
             <img src={bookIcon} alt="Books Icon" style={{ width: "200px", margin: "0 auto", marginTop: "50px", display: "block" }} />
@@ -46,6 +60,8 @@ const Search = () => {
                                 authors={book.volumeInfo.authors}
                                 description={book.volumeInfo.description}
                                 thumbnail={book.volumeInfo.imageLinks.thumbnail}
+                                save={saveBook}
+                                saved={false}
                             />
                         )
                     }) :
