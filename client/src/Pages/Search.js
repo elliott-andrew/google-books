@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TextArea, FormBtn } from '../Components/Form';
+import axios from 'axios'
 import bookIcon from "../assets/index";
 
 const Search = () => {
@@ -9,6 +10,7 @@ const Search = () => {
             results: []
         }
     );
+
     handleEventChange = event => {
         setFormObject(
             {
@@ -16,6 +18,14 @@ const Search = () => {
                 title: event.target.value
             }
         );
+    };
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        const REQUESTURL = `https://www.googleapis.com/books/v1/volumes?q=${formObject.title.split(' ').join('+')}`;
+        axios.get(REQUESTURL)
+            .then(res => setFormObject({ ...formObject, results: res.data.items }))
+            .catch(err);
     };
 
     return (
