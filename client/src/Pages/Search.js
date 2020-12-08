@@ -11,7 +11,7 @@ const Search = () => {
         }
     );
 
-    handleEventChange = event => {
+    const handleEventChange = event => {
         setFormObject(
             {
                 ...formObject,
@@ -20,7 +20,7 @@ const Search = () => {
         );
     };
 
-    handleFormSubmit = event => {
+    const handleFormSubmit = event => {
         event.preventDefault();
         const REQUESTURL = `https://www.googleapis.com/books/v1/volumes?q=${formObject.title.split(' ').join('+')}`;
         axios.get(REQUESTURL)
