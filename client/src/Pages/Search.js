@@ -9,6 +9,14 @@ const Search = () => {
             results: []
         }
     );
+    handleEventChange = event => {
+        setFormObject(
+            {
+                ...formObject,
+                title: event.target.value
+            }
+        );
+    };
 
     return (
         <form>
