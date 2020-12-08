@@ -1,16 +1,16 @@
 import React from 'react';
-import "./style.css"
+import "./style.css";
 
 export function TextArea(props) {
     return (
         <div id="roundedCorners">
-            <textarea rows="1" id="searchBox" />
+            <textarea value={formObject.title} onChange={handleChange} rows="1" id="searchBox" />
         </div>
     )
 };
 
 export function FormBtn(props) {
     return (
-        <input id="submitBtn" type="submit" />
+        <input onClick={handleFormSubmit} id="submitBtn" type="submit" />
     )
 };
