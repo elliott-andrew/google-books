@@ -12,7 +12,7 @@ MERN stack application, Google Books API, Heroku
 
 ## URL to Working Site
 
-[https://dashboard.heroku.com/apps/stormy-sea-59985](https://dashboard.heroku.com/apps/stormy-sea-59985)
+[https://stormy-sea-59985.herokuapp.com](https://stormy-sea-59985.herokuapp.com)
 
 ## Installation
 
