@@ -14,3 +14,9 @@ export function FormBtn(props) {
         <input onClick={props.onClick} id="submitBtn" type="submit" />
     )
 };
+
+export function saveBtn(props) {
+    return (
+        <input onClick={props.onClick}>Save</input>
+    )
+};
