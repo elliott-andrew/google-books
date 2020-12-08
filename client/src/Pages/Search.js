@@ -55,6 +55,7 @@ const Search = () => {
                 formObject.title ?
                     formObject.results.map(book => {
                         return (
+
                             <Book
                                 title={book.volumeInfo.title}
                                 authors={book.volumeInfo.authors}
@@ -63,6 +64,7 @@ const Search = () => {
                                 save={saveBook}
                                 saved={false}
                             />
+
                         )
                     }) :
                     <p style={{ textAlign: "center", marginTop: "50px" }}>Search above to find information on any book</p>
